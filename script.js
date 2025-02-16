@@ -46,4 +46,15 @@ function togglePassword() {
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    let marquee = document.getElementById("marquee");
+
+    marquee.addEventListener("mouseover", function () {
+        marquee.stop(); // Stop scrolling when the user hovers
+    });
+
+    marquee.addEventListener("mouseout", function () {
+        marquee.start(); // Resume scrolling when the user moves away
+    });
+});
 
