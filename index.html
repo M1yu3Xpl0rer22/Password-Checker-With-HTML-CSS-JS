@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1>Password Strength Analyzer</h1>
+                <p class="subtitle">Check and generate secure passwords</p>
+            </div>
+
+            <div class="card-body">
+                <form id="password-form">
+                    <div class="input-group">
+                        <label for="password">Enter Password</label>
+                        <div class="password-input-wrapper">
+                            <input type="password" id="password" name="password" placeholder="Enter your password"
+                                required>
+                            <span class="toggle-password" onclick="togglePassword()">👁️</span>
+                        </div>
+                    </div>
+
+                    <div class="requirements">
+                        <h3>Password Requirements:</h3>
+                        <ul>
+                            <li>At least 8 characters</li>
+                            <li>One uppercase letter</li>
+                            <li>One lowercase letter</li>
+                            <li>One number</li>
+                            <li>One special character</li>
+                        </ul>
+                    </div>
+
+                    <button type="button" class="check-button" onclick="analyzePassword()">
+                        🔍 Analyze Password
+                    </button>
+
+                    <button type="button" class="generate-button" onclick="generatePassword()">
+                        🔑 Generate Secure Password
+                    </button>
+                </form>
+
+                <div id="result" class="result-details" style="display: none;">
+                    <div class="result-header">
+                        <h3>Password Analysis Results</h3>
+                    </div>
+
+                    <div class="result-body">
+                        <ul class="criteria-list" id="criteria-list"></ul>
+
+                        <div class="metrics">
+                            <div class="metric">
+                                <div class="metric-label">Strength Score</div>
+                                <div class="metric-value" id="score">0%</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-label">Entropy</div>
+                                <div class="metric-value" id="entropy">0</div>
+                            </div>
+
+                            
+
+                        </div>
+                    </div>
+
+                    <button type="button" class="retry-button" onclick="resetForm()">
+                        🔄 Analyze Again
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+
+
+
+    <!-- Marquee for creator credit -->
+    <marquee class="footer">Created by Mayur Sapkale 🚀</marquee>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
