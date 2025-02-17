@@ -83,6 +83,20 @@ input:focus {
     color: var(--text-secondary);
 }
 
+.requirements {
+    text-align: left;
+}
+
+.requirements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.requirements li {
+    margin-bottom: 5px;
+}
+
+
 .check-button, .generate-button, .retry-button {
     width: 100%;
     padding: 12px;

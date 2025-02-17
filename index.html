@@ -3,27 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="/shield (1).png" type="image/png">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Strength Analyzer</title>
     <link rel="stylesheet" href="styles.css">
-
-    
 </head>
 <body>
-
-   <!--adding notification --> 
-   <div class="disclaimer-banner">
-    <div class="disclaimer-content">
-      <div class="disclaimer-icon">🔒</div>
-      <div class="disclaimer-text">
-        <strong>Security Notice:</strong> This application processes all data locally in your browser. No passwords or personal information are stored, transmitted, or logged on any server. We prioritize your privacy and security in compliance with industry standards.
-      </div>
+    <!-- Security Notice Banner -->
+    <div class="disclaimer-banner">
+        <div class="disclaimer-content">
+            <div class="disclaimer-icon">🔒</div>
+            <div class="disclaimer-text">
+                <strong>Security Notice:</strong> This application processes all data locally in your browser. No passwords or personal information are stored, transmitted, or logged on any server. We prioritize your privacy and security.
+            </div>
+        </div>
     </div>
-  </div>
-
-
-
 
     <div class="container">
         <div class="card">
@@ -37,8 +30,7 @@
                     <div class="input-group">
                         <label for="password">Enter Password</label>
                         <div class="password-input-wrapper">
-                            <input type="password" id="password" name="password" placeholder="Enter your password"
-                                required>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
                             <span class="toggle-password" onclick="togglePassword()">👁️</span>
                         </div>
                     </div>
@@ -54,23 +46,19 @@
                         </ul>
                     </div>
 
-                    <button type="button" class="check-button" onclick="analyzePassword()">
-                        🔍 Analyze Password
-                    </button>
-
-                    <button type="button" class="generate-button" onclick="generatePassword()">
-                        🔑 Generate Secure Password
-                    </button>
+                    <button type="button" class="check-button" onclick="analyzePassword()">🔍 Analyze Password</button>
+                    <button type="button" class="generate-button" onclick="generatePassword()">🔑 Generate Secure Password</button>
                 </form>
 
                 <div id="result" class="result-details" style="display: none;">
                     <div class="result-header">
+                        
                         <h3>Password Analysis Results</h3>
                     </div>
-
+                    
                     <div class="result-body">
                         <ul class="criteria-list" id="criteria-list"></ul>
-
+                    
                         <div class="metrics">
                             <div class="metric">
                                 <div class="metric-label">Strength Score</div>
@@ -81,58 +69,27 @@
                                 <div class="metric-value" id="entropy">0</div>
                             </div>
                         </div>
+                    
+                        <div class="password-feedback" id="password-feedback">🔍 Checking...</div>
                     </div>
-
-                    <button type="button" class="retry-button" onclick="resetForm()">
-                        🔄 Analyze Again
-                    </button>
+                           
+                    <button type="button" class="retry-button" onclick="resetForm()">🔄 Analyze Again</button>
                 </div>
             </div>
         </div>
     </div>
 
-<!-- Adding New function feedback -->
-<div id="result" class="result-details" style="display: none;">
-    <div class="result-header">
-        <h3>Password Analysis Results</h3>
+    <!-- Footer with Social Links -->
+    <div class="footer-container">
+        <marquee scrollamount="10" class="footer" behavior="scroll" direction="left">
+            Created by <strong>Mayur Sapkale</strong> 🚀 | 
+            Connect with me: 
+            <a href="https://www.linkedin.com/in/mayur-sapkale-72855b25b/" target="_blank">LinkedIn</a> | 
+            <a href="https://github.com/M1yu3Xpl0rer22/" target="_blank">GitHub</a> | 
+            Stay Secure & Keep Learning! 🔐
+        </marquee>
     </div>
-    <div class="result-body">
-        <ul class="criteria-list" id="criteria-list"></ul>
-        <div class="metrics">
-            <div class="metric">
-                <div class="metric-label">Strength Score</div>
-                <div class="metric-value" id="score">0%</div>
-            </div>
-            <div class="metric">
-                <div class="metric-label">Entropy</div>
-                <div class="metric-value" id="entropy">0</div>
-            </div>
-        </div>
-        <div class="password-feedback" id="password-feedback">🔍 Checking...</div>
-    </div>
-    <button type="button" class="retry-button" onclick="resetForm()">🔄 Analyze Again</button>
-</div>
-
-
-
-
-
-    <!-- Moving Marquee Footer with Social Links -->
-
-<div class="footer-container">
-    <marquee scrollamount="10" class="footer" id="marquee" behavior="scroll" direction="left" scrollamount="5">
-        Created by <strong>Mayur Sapkale</strong> 🚀 | 
-        Connect with me: 
-        <a href="https://www.linkedin.com/in/mayur-sapkale-72855b25b/" target="_blank">LinkedIn</a> | 
-        <a href="https://github.com/M1yu3Xpl0rer22/" target="_blank">GitHub</a> | 
-        Stay Secure & Keep Learning! 🔐
-    </marquee>
-  </div>
-  
-
 
     <script src="script.js"></script>
-
-    
 </body>
 </html>
