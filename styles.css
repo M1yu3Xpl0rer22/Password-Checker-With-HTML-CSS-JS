@@ -198,3 +198,50 @@ input:focus {
 .footer a:hover {
     color: #f39c12;
 }
+
+
+
+.password-feedback {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+.disclaimer-banner {
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px 0;
+    width: 100%;
+    box-shadow: 0 1px 3px var(--glow-effect);
+    margin-bottom: 20px;
+  }
+  
+  .disclaimer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .disclaimer-icon {
+    font-size: 18px;
+    margin-right: 15px;
+    color: var(--primary-color);
+  }
+  
+  .disclaimer-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-primary);
+  }
+  
+  .disclaimer-text strong {
+    color: var(--success-color);
+  }
+
+  
+
+  
