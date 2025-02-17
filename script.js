@@ -110,3 +110,15 @@ function generatePassword() {
     let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
     document.getElementById("password").value = Array(12).fill(chars).map(x => x[Math.floor(Math.random() * x.length)]).join('');
 }
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    let marquee = document.getElementById("marquee");
+    marquee.addEventListener("mouseover", function () {
+        marquee.stop(); // Stop scrolling when the user hovers
+    });
+    marquee.addEventListener("mouseout", function () {
+        marquee.start(); // Resume scrolling when the user moves away
+    });
+});
